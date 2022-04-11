@@ -44,15 +44,13 @@ const Gallery = () => {
       destination.index > source.index ? 'greater' : 'less';
 
     let affectedRange;
-    if (directionOfDrag === 'GREATER') {
+    if (directionOfDrag === 'greater') {
       affectedRange = range(source.index, destination.index + 1);
-    } else if (directionOfDrag === 'LESS') {
+    } else if (directionOfDrag === 'less') {
       affectedRange = range(destination.index, source.index);
     }
     console.log('direction of drag', directionOfDrag, affectedRange);
 
-    // let affectedRange: any[];
-    // // console.log("AFFECTED RANGE", affectedRange);
     // const reOrderedPlaylist = playlist.map((song) => {
     //   if (song.id === parseInt(result.draggableId)) {
     //     song.position = result.destination.index;
