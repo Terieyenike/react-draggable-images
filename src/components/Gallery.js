@@ -32,6 +32,14 @@ const Gallery = () => {
     if (!destination) {
       return;
     }
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+
     console.log('RESULT', destination, source);
     // if (
     //   destination.droppableId === source.droppableId &&
