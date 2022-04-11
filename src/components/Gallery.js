@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import galleryData from '../data';
 
-import { orderBy } from 'lodash';
+import { orderBy, range } from 'lodash';
 
 const Gallery = () => {
   const [images, setImages] = useState(galleryData);
@@ -40,21 +40,18 @@ const Gallery = () => {
       return;
     }
 
-    console.log('RESULT', destination, source);
-    // if (
-    //   destination.droppableId === source.droppableId &&
-    //   destination.index === source.index
-    // ) {
-    //   return;
-    // }
-    // const directionOfDrag =
-    //   destination.index > source.index ? "GREATER" : "LESS";
+    const directionOfDrag =
+      destination.index > source.index ? 'greater' : 'less';
+
+    let affectedRange;
+    if (directionOfDrag === 'GREATER') {
+      affectedRange = range(source.index, destination.index + 1);
+    } else if (directionOfDrag === 'LESS') {
+      affectedRange = range(destination.index, source.index);
+    }
+    console.log('direction of drag', directionOfDrag, affectedRange);
+
     // let affectedRange: any[];
-    // if (directionOfDrag === "GREATER") {
-    //   affectedRange = range(source.index, destination.index + 1);
-    // } else if (directionOfDrag === "LESS") {
-    //   affectedRange = range(destination.index, source.index);
-    // }
     // // console.log("AFFECTED RANGE", affectedRange);
     // const reOrderedPlaylist = playlist.map((song) => {
     //   if (song.id === parseInt(result.draggableId)) {
