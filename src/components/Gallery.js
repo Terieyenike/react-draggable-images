@@ -49,8 +49,24 @@ const Gallery = () => {
     } else if (directionOfDrag === 'less') {
       affectedRange = range(destination.index, source.index);
     }
-    console.log('direction of drag', directionOfDrag, affectedRange);
 
+    const reOrderedImage = images.map((image) => {
+      if (image.id === parseInt(result.draggableId)) {
+        image.position = result.destination.index;
+        return image;
+      } else if (affectedRange.includes(image.position)) {
+        if (directionOfDrag === 'greater') {
+          image.position = image.position - 1;
+          return image;
+        } else if (directionOfDrag === 'less') {
+          image.position = image.position + 1;
+          return image;
+        } else {
+          return image;
+        }
+      }
+    });
+    setImages(reOrderedImage);
     // const reOrderedPlaylist = playlist.map((song) => {
     //   if (song.id === parseInt(result.draggableId)) {
     //     song.position = result.destination.index;
