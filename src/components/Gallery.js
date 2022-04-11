@@ -20,7 +20,6 @@ const Gallery = () => {
               <p className='card__info-title'>{title}</p>
               <p className='card__info-subtitle'>{subtitle}</p>
             </div>
-
             <img src={img} alt={subtitle} />
           </div>
         )}
