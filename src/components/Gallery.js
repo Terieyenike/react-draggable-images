@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import galleryData from '../data';
 
@@ -6,6 +6,17 @@ import { orderBy, range } from 'lodash';
 
 const Gallery = () => {
   const [images, setImages] = useState(galleryData);
+
+  useEffect(() => {
+      const data = localStorage.getItem('images')
+      if(data) {
+          setImages(JSON.parse(data))
+      }
+  }, [])
+
+  useEffect(() => {
+      localStorage.setItem("images", JSON.stringify(images))
+  }, [images])
 
   const renderImages = orderBy(images, 'position').map((item) => (
     <Draggable
