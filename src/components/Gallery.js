@@ -83,6 +83,7 @@ const Gallery = () => {
         });
         setImages(reOrderedImage);
     };
+
     return (
         <div>
             <DragDropContext onDragEnd={onDragEnd}>
