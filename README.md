@@ -2,7 +2,9 @@
 
 ### Project Demo
 
-![rearrange gallery](https://uc220bfc1c644cb4cb4ef0d90ed8.previews.dropboxusercontent.com/p/thumb/ABhf1Er9iBt7liu-y-6_Gjp3aUTY5dC4eT9NpZtI5dytl87eR8pWQjtTBscYaM5PcIFSB17bMDfy_NmFlCJOZP3PsaMwMEZe26M9kcudeaUn1k5zpW-cW8FaZYzCqqOGeWZJ4eD1IUz_20wbiGCWwJ8ZWLfLoOSvWjdtH3bgTrjM2FtREOwfwPZox49CdBfSM7CyC78WZIsNkiblwYHObKUxhAjTwJxOwxQkszG2BY5YAXj7x4fp4boEHI4ZPJCqzVpKe2JLWwdli3B5G4uM7HGko-R5m24qFFmREwwau_ycIXeQDuZH29WZ_00aUb6_CmiNIEPsPZ1giSYgylJ26v0bMhCbzBUwqqnPp1PipQ-Bmx4bd7YlPP7kPoxoBQWtn68jY0tSPg_MIFxv3ekmCVVFtg8gth_jQDC1HFHmKRkdBw/p.gif)
+<div align="center">
+  <img src="https://paper-attachments.dropbox.com/s_9C163DAF0BAD17F46FE09B27FFA2691879DD9969B7774AE65E8E34DBCB1E2D9B_1649801712743_react-beautiful-dnd.gif" alt="rearrange gallery" />
+</div>
 
 ### Project Description
 
